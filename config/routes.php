@@ -12,7 +12,7 @@ return static function (
     ContainerInterface $container
 ): void {
     $app->get(
-        '/api/event/material-change/{id}',
+        '/api/event/material-change/{sku-code}',
         Api\Event\MaterialChange\RequestHandler::class,
         'api.event.material-change'
     );

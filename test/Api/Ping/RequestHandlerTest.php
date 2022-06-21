@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace ApiTest\Handler;
+namespace ApiTest\Ping;
 
-use Api\Handler\PingHandler;
+use Api\Ping\RequestHandler;
 use Laminas\Diactoros\Response\JsonResponse;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
 
 use function json_decode;
 
-class PingHandlerTest extends TestCase
+class RequestHandlerTest extends TestCase
 {
     public function testResponse(): void
     {
-        $pingHandler = new PingHandler();
+        $pingHandler = new RequestHandler();
         $response    = $pingHandler->handle(
             $this->createMock(ServerRequestInterface::class)
         );

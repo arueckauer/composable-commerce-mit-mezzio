@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Api\Handler;
+namespace Api\Ping;
 
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ResponseInterface;
@@ -11,7 +11,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 use function time;
 
-class PingHandler implements RequestHandlerInterface
+class RequestHandler implements RequestHandlerInterface
 {
     public function handle(ServerRequestInterface $request): ResponseInterface
     {

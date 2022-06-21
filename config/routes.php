@@ -12,6 +12,12 @@ return static function (
     ContainerInterface $container
 ): void {
     $app->get(
+        '/api/event/material-change/{id}',
+        Api\Event\MaterialChange\RequestHandler::class,
+        'api.event.material-change'
+    );
+
+    $app->get(
         '/api/ping',
         Api\Ping\RequestHandler::class,
         'api.ping'

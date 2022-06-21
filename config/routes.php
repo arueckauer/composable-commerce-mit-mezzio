@@ -18,6 +18,12 @@ return static function (
     );
 
     $app->get(
+        '/api/event/customer-create',
+        Api\Event\MaterialChange\RequestHandler::class,
+        'api.event.customer_create'
+    );
+
+    $app->get(
         '/api/ping',
         Api\Ping\RequestHandler::class,
         'api.ping'

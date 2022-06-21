@@ -14,4 +14,15 @@ return [
             ],
         ],
     ],
+    'sap'            => [
+        'client' => [
+            'options' => [
+                'auth'     => [
+                    'my_username',
+                    'my_secret_password',
+                ],
+                'base_uri' => 'https://my-app.sap.com/',
+            ],
+        ],
+    ],
 ];

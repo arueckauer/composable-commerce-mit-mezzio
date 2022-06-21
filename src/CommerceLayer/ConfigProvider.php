@@ -18,9 +18,12 @@ class ConfigProvider
         return [
             'invokables' => [],
             'factories'  => [
-                Sku\Repository::class     => Sku\RepositoryFactory::class,
-                ApiClientInterface::class => ApiClientFactory::class,
-                Client::class             => ClientFactory::class,
+                Authentication\Hmac\Middleware::class        => Authentication\Hmac\MiddlewareFactory::class,
+                Authentication\Hmac\Validator::class         => Authentication\Hmac\ValidatorFactory::class,
+                Authentication\Hmac\SharedSecretStore::class => Authentication\Hmac\SharedSecretStoreFactory::class,
+                Sku\Repository::class                        => Sku\RepositoryFactory::class,
+                ApiClientInterface::class                    => ApiClientFactory::class,
+                Client::class                                => ClientFactory::class,
             ],
         ];
     }

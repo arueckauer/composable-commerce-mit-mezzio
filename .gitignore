@@ -1,0 +1,8 @@
+# local configs
+config/autoload/*.local.php
+
+# cache
+/.phpunit.cache/
+
+# .env
+.env.local

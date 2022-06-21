@@ -44,12 +44,14 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/App/"
+            "App\\": "src/App/",
+            "CommerceLayer\\": "src/CommerceLayer/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AppTest\\": "test/App/"
+            "AppTest\\": "test/App/",
+            "CommerceLayerTest\\": "test/CommerceLayer/"
         }
     }
 }

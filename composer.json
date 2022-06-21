@@ -46,6 +46,7 @@
     "autoload": {
         "psr-4": {
             "Api\\": "src/Api/",
+            "ApiConnector\\": "src/ApiConnector/",
             "CommerceLayer\\": "src/CommerceLayer/",
             "Sap\\": "src/Sap/"
         }
@@ -53,6 +54,7 @@
     "autoload-dev": {
         "psr-4": {
             "ApiTest\\": "test/Api/",
+            "ApiConnectorTest\\": "test/ApiConnector/",
             "CommerceLayerTest\\": "test/CommerceLayer/",
             "SapTest\\": "test/Sap/"
         }

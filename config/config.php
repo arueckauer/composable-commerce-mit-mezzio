@@ -19,6 +19,7 @@ $aggregator = new ConfigAggregator([
 
     // App
     Api\ConfigProvider::class,
+    ApiConnector\ConfigProvider::class,
     CommerceLayer\ConfigProvider::class,
     Sap\ConfigProvider::class,
 

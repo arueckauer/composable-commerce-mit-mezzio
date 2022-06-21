@@ -12,7 +12,7 @@ use CommerceLayer\Sku\Request\Update;
 class Repository
 {
     public function __construct(
-        private Client $client,
+        private readonly Client $client,
     ) {
     }
 

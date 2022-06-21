@@ -17,7 +17,11 @@ class ConfigProvider
     {
         return [
             'invokables' => [],
-            'factories'  => [],
+            'factories'  => [
+                Sku\Repository::class     => Sku\RepositoryFactory::class,
+                ApiClientInterface::class => ApiClientFactory::class,
+                Client::class             => ClientFactory::class,
+            ],
         ];
     }
 }

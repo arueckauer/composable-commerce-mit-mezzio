@@ -46,13 +46,15 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/App/",
-            "CommerceLayer\\": "src/CommerceLayer/"
+            "CommerceLayer\\": "src/CommerceLayer/",
+            "Sap\\": "src/Sap/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "AppTest\\": "test/App/",
-            "CommerceLayerTest\\": "test/CommerceLayer/"
+            "CommerceLayerTest\\": "test/CommerceLayer/",
+            "SapTest\\": "test/Sap/"
         }
     }
 }

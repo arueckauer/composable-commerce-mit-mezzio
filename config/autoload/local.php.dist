@@ -2,4 +2,16 @@
 
 declare(strict_types=1);
 
-return [];
+return [
+    'commerce_layer' => [
+        'client' => [
+            'options' => [
+                'base_uri' => 'https://my-app.commerce-layer.com/',
+                'headers'  => [
+                    'Content-Type' => 'application/vnd.api+json',
+                    'Accept'       => 'application/vnd.api+json',
+                ],
+            ],
+        ],
+    ],
+];

@@ -19,7 +19,10 @@ return static function (
 
     $app->get(
         '/api/event/customer-create',
-        Api\Event\MaterialChange\RequestHandler::class,
+        [
+            CommerceLayer\Authentication\Hmac\Middleware::class,
+            Api\Event\MaterialChange\RequestHandler::class,
+        ],
         'api.event.customer_create'
     );
 

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace CommerceLayer\Sku;
 
 use Psr\Http\Message\ResponseInterface;
+use Sap\Material\Dto as MaterialDto;
 
 use function json_decode;
 
@@ -35,7 +36,7 @@ class Dto
         );
     }
 
-    public static function fromMaterialDto(\Sap\Material\Dto $material): self
+    public static function fromMaterialDto(MaterialDto $material): self
     {
         return new self(
             null,

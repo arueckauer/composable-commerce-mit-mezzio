@@ -17,7 +17,9 @@ class ConfigProvider
     {
         return [
             'invokables' => [],
-            'factories'  => [],
+            'factories'  => [
+                Material\DataToCommerce\Transferrer::class => Material\DataToCommerce\TransferrerFactory::class,
+            ],
         ];
     }
 }

@@ -13,7 +13,7 @@ return static function (
 ): void {
     $app->get(
         '/api/ping',
-        App\Handler\PingHandler::class,
+        Api\Handler\PingHandler::class,
         'api.ping'
     );
 };

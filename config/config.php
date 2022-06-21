@@ -18,7 +18,7 @@ $aggregator = new ConfigAggregator([
     Mezzio\Router\ConfigProvider::class,
 
     // App
-    App\ConfigProvider::class,
+    Api\ConfigProvider::class,
     CommerceLayer\ConfigProvider::class,
     Sap\ConfigProvider::class,
 

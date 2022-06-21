@@ -17,7 +17,8 @@ class ConfigProvider
     {
         return [
             'invokables' => [
-                Ping\RequestHandler::class => Ping\RequestHandler::class,
+                Event\MaterialChange\RequestHandler::class => Event\MaterialChange\RequestHandler::class,
+                Ping\RequestHandler::class                 => Ping\RequestHandler::class,
             ],
             'factories'  => [],
         ];

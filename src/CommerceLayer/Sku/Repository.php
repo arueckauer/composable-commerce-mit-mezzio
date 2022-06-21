@@ -23,9 +23,9 @@ class Repository
         return Dto::fromResponse($response);
     }
 
-    public function create(array $attributes, array $relationships): Dto
+    public function create(Dto $dto): Dto
     {
-        $request  = Create::create($attributes, $relationships);
+        $request  = Create::create($dto);
         $response = $this->client->sendRequest($request);
 
         return Dto::fromResponse($response);

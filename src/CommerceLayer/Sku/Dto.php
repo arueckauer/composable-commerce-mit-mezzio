@@ -13,7 +13,7 @@ use const JSON_THROW_ON_ERROR;
 class Dto
 {
     public function __construct(
-        public readonly string $id,
+        public readonly ?string $id,
         public readonly string $code,
         public readonly string $name,
     ) {
@@ -32,6 +32,15 @@ class Dto
             $data['data']['id'],
             $data['data']['attributes']['code'],
             $data['data']['attributes']['name'],
+        );
+    }
+
+    public static function fromMaterialDto(\Sap\Material\Dto $material): self
+    {
+        return new self(
+            null,
+            $material->sku,
+            $material->name,
         );
     }
 }

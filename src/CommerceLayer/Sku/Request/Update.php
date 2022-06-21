@@ -12,7 +12,7 @@ use function json_encode;
 
 use const JSON_THROW_ON_ERROR;
 
-class Create
+class Update
 {
     public static function create(Dto $dto): RequestInterface
     {
@@ -27,8 +27,8 @@ class Create
         ];
 
         return new Request(
-            'POST',
-            '/api/skus',
+            'PATCH',
+            '/api/skus/' . $dto->id,
             [],
             json_encode($data, JSON_THROW_ON_ERROR)
         );

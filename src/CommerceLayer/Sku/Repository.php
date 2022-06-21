@@ -7,6 +7,7 @@ namespace CommerceLayer\Sku;
 use CommerceLayer\Client;
 use CommerceLayer\Sku\Request\Create;
 use CommerceLayer\Sku\Request\ReadOneByCode;
+use CommerceLayer\Sku\Request\Update;
 
 class Repository
 {
@@ -23,9 +24,17 @@ class Repository
         return Dto::fromResponse($response);
     }
 
-    public function create(array $attributes, array $relationships): Dto
+    public function create(Dto $dto): Dto
     {
-        $request  = Create::create($attributes, $relationships);
+        $request  = Create::create($dto);
+        $response = $this->client->sendRequest($request);
+
+        return Dto::fromResponse($response);
+    }
+
+    public function update(Dto $sku): Dto
+    {
+        $request  = Update::create($sku);
         $response = $this->client->sendRequest($request);
 
         return Dto::fromResponse($response);

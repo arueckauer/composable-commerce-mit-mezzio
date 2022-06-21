@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Api;
+namespace ApiConnector;
 
 class ConfigProvider
 {
@@ -16,11 +16,10 @@ class ConfigProvider
     public function getDependencies(): array
     {
         return [
-            'invokables' => [
-                Event\MaterialChange\RequestHandler::class => Event\MaterialChange\RequestHandler::class,
-                Ping\RequestHandler::class                 => Ping\RequestHandler::class,
+            'invokables' => [],
+            'factories'  => [
+                Material\DataToCommerce\Transferrer::class => Material\DataToCommerce\TransferrerFactory::class,
             ],
-            'factories'  => [],
         ];
     }
 }

@@ -1,1 +1,1 @@
-# php-magazin-laminas
+# composable-commerce-mit-mezzio

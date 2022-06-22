@@ -1,7 +1,7 @@
 {
     "name": "arueckauer/composable-commerce-mit-mezzio",
     "type": "project",
-    "description": "Laminas mezzio skeleton. Begin developing PSR-15 middleware applications in seconds!",
+    "description": "Composable Commerce with Mezzio",
     "homepage": "https://github.com/arueckauer/composable-commerce-mit-mezzio",
     "license": "BSD-3-Clause",
     "require": {

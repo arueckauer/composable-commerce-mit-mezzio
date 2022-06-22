@@ -11,7 +11,7 @@ class SharedSecretStore
     /** @var SharedSecret[] */
     private array $sharedSecrets;
 
-    public function __construct(array $sharedSecrets)
+    public function __construct(SharedSecret ...$sharedSecrets)
     {
         $this->sharedSecrets = $sharedSecrets;
     }

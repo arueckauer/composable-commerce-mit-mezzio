@@ -16,6 +16,6 @@ class SharedSecretStoreFactory
             $sharedSecrets[] = new SharedSecret($route, $secret);
         }
 
-        return new SharedSecretStore($sharedSecrets);
+        return new SharedSecretStore(...$sharedSecrets);
     }
 }
